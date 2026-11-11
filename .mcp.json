@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "soundcraft": {
+      "command": "bash",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/start-mcp.sh"],
+      "env": {
+        "SOUNDCRAFT_PLUGIN_MODE": "${user_config.mode}",
+        "SOUNDCRAFT_PLUGIN_CONTROL_PORT": "${user_config.control_port}",
+        "SOUNDCRAFT_PLUGIN_CLI_PATH": "${user_config.cli_path}",
+        "SOUNDCRAFT_PLUGIN_DEMO": "${user_config.demo}",
+        "SOUNDCRAFT_PLUGIN_READ_ROOTS": "${user_config.read_roots}",
+        "SOUNDCRAFT_PLUGIN_WRITE_ROOTS": "${user_config.write_roots}"
+      }
+    }
+  }
+}

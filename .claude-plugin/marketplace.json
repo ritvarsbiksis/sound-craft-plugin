@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "soundcraft",
+  "description": "SoundCraft audio workstation tools for Claude Code",
+  "owner": {
+    "name": "Ritvars Bikšis"
+  },
+  "plugins": [
+    {
+      "name": "soundcraft-plugin",
+      "source": "./",
+      "description": "soundcraft MCP server plus soundcraft and procedural-audio skills",
+      "category": "design"
+    }
+  ]
+}

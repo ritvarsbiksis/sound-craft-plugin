@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "soundcraft-plugin",
+  "displayName": "SoundCraft",
+  "version": "0.1.0",
+  "description": "Make, mix and render audio in SoundCraft from Claude: the soundcraft MCP server (live app or headless), plus skills for driving SoundCraft and for procedural audio (synthesis, granular processing, procedural variation, physics-driven sound).",
+  "author": {
+    "name": "Ritvars Bikšis"
+  },
+  "repository": "https://github.com/ritvarsbiksis/soundcraft-plugin",
+  "license": "MIT",
+  "keywords": [
+    "soundcraft",
+    "audio",
+    "daw",
+    "synthesis",
+    "procedural-audio",
+    "sound-design",
+    "game-audio",
+    "mcp"
+  ],
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "Connection mode",
+      "description": "auto: drive a running SoundCraft (started with --control PORT) and fall back to headless. connect: the running app only. headless: an in-process engine, no app needed.",
+      "default": "auto",
+      "options": ["auto", "connect", "headless"]
+    },
+    "control_port": {
+      "type": "number",
+      "title": "Control port",
+      "description": "Loopback port the SoundCraft app listens on when started with --control PORT.",
+      "default": 7801,
+      "min": 1,
+      "max": 65535
+    },
+    "cli_path": {
+      "type": "string",
+      "title": "soundcraft-cli path",
+      "description": "Absolute path to soundcraft-cli (or its folder). Leave empty to search PATH and the usual install folders.",
+      "default": ""
+    },
+    "demo": {
+      "type": "boolean",
+      "title": "Start from the demo session (headless)",
+      "description": "Headless only: start the engine with SoundCraft's demo session instead of an empty one (--demo).",
+      "default": false
+    },
+    "read_roots": {
+      "type": "string",
+      "multiple": true,
+      "title": "Read roots (optional)",
+      "description": "Existing folders the agent may read from (open, import, sampler load, presets). Setting any read or write root confines file access and forces headless mode.",
+      "default": []
+    },
+    "write_roots": {
+      "type": "string",
+      "multiple": true,
+      "title": "Write roots (optional)",
+      "description": "Existing folders the agent may save, bounce and export into. Setting any read or write root confines file access and forces headless mode.",
+      "default": []
+    }
+  }
+}
