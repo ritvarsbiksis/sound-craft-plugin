@@ -25,7 +25,7 @@ Requirements: Claude Code, `soundcraft-cli`; the SoundCraft desktop app only for
 
 1. Add the marketplace and install the plugin (in Claude Code):
    ```
-   /plugin marketplace add ritvarsbiksis/soundcraft-plugin
+   /plugin marketplace add ritvarsbiksis/sound-craft-plugin
    /plugin install soundcraft-plugin@soundcraft
    ```
 2. Install `soundcraft-cli`. On macOS it is **not** inside `SoundCraft.app`; it ships as a separate
